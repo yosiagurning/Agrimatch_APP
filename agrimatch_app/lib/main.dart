@@ -10,7 +10,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MultiProvider(
     providers: [
-      ChangeNotifierProvider(create: (_) => AuthProvider()..init()),
+      ChangeNotifierProvider(create: (_) => AuthProvider()),
       ChangeNotifierProvider(create: (_) => SoilProvider()),
       ChangeNotifierProvider(create: (_) => ChatProvider()),
       ChangeNotifierProvider(create: (_) => HistoryProvider()),

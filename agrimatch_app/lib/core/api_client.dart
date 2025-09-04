@@ -6,7 +6,7 @@ class ApiClient {
   final String baseUrl;
   ApiClient(this.baseUrl);
 
-  Future<Map<String, String>> _authHeader() async {
+  Future<Map<String, String>> _authHeader() async { 
     final token = await SecureStorage.getToken();
     final h = <String, String>{'Content-Type': 'application/json'};
     if (token != null) h['Authorization'] = 'Bearer $token';
